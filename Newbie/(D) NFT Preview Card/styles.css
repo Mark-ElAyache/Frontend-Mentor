@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color-softblue: hsl(215, 51%, 70%);
+    --primary-color-cyan: hsl(178, 100%, 50%);
+    --neutral-darkblue1: hsl(217, 54%, 11%);
+    --neutral-darkblue2: hsl(216, 50%, 16%);
+    --neutral-darkblue3: hsl(215, 32%, 27%);
+    --neutral-white: hsl(0, 0%, 100%);
+}
+body {
+    zoom: 0.8;
+    padding: 0;
+    margin: 0;
+    background-color: var(--neutral-darkblue1);
+    color: var(--neutral-white);
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+}
+h1 {
+    margin: 40px 0 0;
+}
+p {
+    font-weight: 300;
+    font-size: 1.75rem;
+    color: var(--primary-color-softblue);
+    margin-bottom: 0;
+}
+svg {
+    padding: 8px;
+    vertical-align: middle;
+    zoom: 1.75;
+}
+hr {
+    width: 100%;
+    border-color: var(--neutral-darkblue3);
+}
+a {
+    color: var(--neutral-white);
+    text-decoration: none;
+}
+.container {
+    zoom: 0.8;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    box-shadow: 0 20px 0 20px hsl(213, 59%, 10%);
+    background-color: var(--neutral-darkblue2);
+    display: grid;
+    justify-content: center;
+
+    padding: 40px;
+    border-radius: 15px;
+}
+.container .image {
+    position: relative;
+    height: 500px;
+}
+.container .image .etherium {
+    border-radius: 15px;
+    width: 500px;
+    
+}
+.container .image .etherium-hover,
+.container .image:hover a  {
+    display: none;
+}
+.container .image:hover .etherium-hover,
+.container .image:hover a {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container .image:hover .etherium-hover {
+    pointer-events:none;
+}
+.container .image:hover a {
+    background-color: var(--primary-color-cyan);
+    opacity: 0.4;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+.info .price {
+    color: var(--primary-color-cyan);   
+}
+.avatar {
+    height: 50px;
+    border: 1px solid var(--neutral-white);
+    border-radius: 100%;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+.container h1 a:hover,
+.container p:last-child a:hover {
+    color: var(--primary-color-cyan);
+}
+.attribution {
+    zoom: 1.5;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+    --color-orange: hsl(31, 77%, 52%);
+    --color-cyan: hsl(184, 100%, 22%);
+    --color-darkcyan: hsl(179, 100%, 13%);
+    --color-white: hsla(0, 0%, 100%, 0.75);
+    --color-gray: hsl(0, 0%, 95%);
+}
+body {
+    display: flex;
+    margin: auto 0;
+    padding: 0 !important;
+    height: 100vh;
+    width: 100vw;
+
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+body,
+button {
+   background-color: var(--color-gray); 
+}
+/* CONTAINER */
+.container {
+    align-items: center;
+    width: 45%;
+    margin: auto;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container div {
+    box-sizing: border-box;
+    padding: 40px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    color: var(--color-gray);
+}
+.container p {
+    color: var(--color-white);
+    margin-bottom: 80px;
+}
+.container button {
+    border-radius: 30px;
+    border: 1px solid white;
+
+    padding: 15px 40px;
+    margin-top: auto;
+    
+    width: fit-content;
+    font-weight: bolder;
+}
+.container button:hover {
+    box-sizing: border-box;
+
+    background-color: transparent;
+    color: white;
+
+    cursor: pointer;
+}
+/* SUB SECTIONS */
+.sedans {
+    background-color: var(--color-orange);
+}
+.sedans button {
+    color: var(--color-orange);
+}
+.suvs {
+    background-color: var(--color-cyan);
+}
+.suvs button {
+    color: var(--color-cyan);
+}
+.luxury {
+    background-color: var(--color-darkcyan);
+}
+.luxury button {
+    color: var(--color-darkcyan);
+}
+/* ATTRIBUTION */
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+@media screen and (max-width: 800px) {
+    .container {
+        width: 80%;
+    }
+    .container p {
+        margin-bottom: 25px;
+    }
+}

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root {
+    --color-paleblue: hsl(225, 100%, 94%);
+    --color-brightblue: hsl(245, 75%, 52%);
+    --color-verypaleblue: hsl(225, 100%, 98%);
+    --color-desaturatedblue: hsl(224, 23%, 55%);
+    --color-darkblue: hsl(223, 47%, 23%);
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-paleblue);
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+.container {
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    background-color: white;
+    width: 360px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    padding-bottom: 0;
+    border-radius: 20px;
+    box-shadow: 0 5px 50px -10px rgb(154, 154, 154);
+}
+.container p {
+    color: var(--color-desaturatedblue);
+    margin: 30px;
+}
+.container .music-pic {
+    margin: -40px;
+    margin-bottom: 20px;
+}
+/* PAYMENT METHOD BLOCK */
+.payment-block {
+    background-color: var(--color-verypaleblue);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 10px;
+}
+.plan p:first-child {
+    font-weight: 900;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.plan p:last-child {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.change-order {
+    margin-left: auto;
+    font-weight: 900;
+}
+.change-order:hover {
+    text-decoration: none;
+    color: purple;
+}
+.proceed-payment {
+    background-color: var(--color-brightblue);
+    box-shadow: 0 10px 50px -10px rgb(154, 154, 154);
+    color: white !important;
+    padding: 15px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 10px;
+}
+.proceed-payment:hover {
+    background-color: purple;
+}
+.cancel-button {
+    font-weight: 900;
+}
+.cancel-button:hover {
+    color: black
+}
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}

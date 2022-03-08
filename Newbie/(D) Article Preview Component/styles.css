@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+:root {
+    --color-verydarkblue: hsl(217, 19%, 35%);
+    --color-darkblue: hsl(214, 17%, 51%);
+    --color-blue: hsl(212, 23%, 69%);
+    --color-lightblue: hsl(210, 46%, 95%);
+}
+body {
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--color-lightblue);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    overflow-x: hidden;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 0 !important;
+}
+/* Container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    width: min(50%, 700px);
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 50px hsla(0, 0%, 0%, 0.2);
+}
+body,
+.container {
+    box-sizing: border-box;
+}
+body,
+.profile .profile-info p {
+    margin: 0;
+}
+/* Image */
+.container .image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+/* Content */
+.content {
+    grid-column: 2 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5em;
+}
+.content .comment {
+    line-height: 1.5;
+    color: var(--color-verydarkblue);
+}
+
+/* Profile */
+.profile {
+    margin: 1.5em 0;
+    position: relative;
+}
+.profile,
+.profile .user {
+    display: flex;
+    align-items: center;
+}
+.profile img {
+    border-radius: 100%;
+    height: 3em;
+    margin-right: 1.5em;
+}
+/* ...Profile Info */
+.profile .profile-info .name {
+    font-weight: 700;
+}
+.profile .profile-info .date {
+    opacity: 0.5;
+}
+/* ...Share Button */
+#share,
+#share .share-button {
+    margin-left: auto;
+}
+#share .shareable-links {
+    color: var(--color-blue);
+    letter-spacing: 4px;
+    user-select: none;
+    
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+#share object {
+    user-select: none;
+    pointer-events: none;
+}
+#share .shareable-links a:hover {
+    transform: scale(1.2);
+    transition: all 0.1s ease-in;
+}
+#share .share-button {
+    background-color: var(--color-lightblue);
+    border-radius: 100%;
+    height: 2.5em;
+    width: 2.5em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Attribution */
+.attribution {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+/* JavaScript Classes */
+.share-button-active {
+    background-color: var(--color-darkblue) !important;
+}
+.object-active {
+    filter: brightness(100);
+}
+.display-none {
+    display: none !important;
+}
+.share-mobile-active {
+    margin: -20px -80px;
+    /* margin-top: 20px; */
+    width: 160%;   
+    padding: 18px 40px;
+    transform: translate(-40px, 0);
+    display: flex;
+    align-items: center;
+    
+    background-color: var(--color-verydarkblue);
+}
+/* FIX SHARE BOX DURING VIEWPORT WIDTH CHANGE */
+/* ADD LINKS FOR SVG */
+@media screen and (min-width: 800px) {
+    /* ...Shareable Links */
+    #share .shareable-links {
+        position: fixed;
+        z-index: 1;
+        background-color: var(--color-verydarkblue);
+
+        height: 50px;
+        padding: 0 40px;
+        border-radius: 10px;
+        box-shadow: 0 10px 50px hsla(0, 0%, 0%, 0.3);
+
+        transform: translate(-43.5%, -160%);
+    }
+    #share .shareable-links i {
+        width: 20px;
+        height: 20px;
+
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+    
+        transform-origin: 0 0;
+        transform: translate(-50%);
+        transform: rotate(45deg);
+        
+        background-color: var(--color-verydarkblue);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        margin: 40px 0;
+    }
+    .container {
+        grid-template: 1fr 1fr / 1fr;
+        width: min(80%, 400px);
+    }
+    .content {
+        padding-bottom: 0;
+        grid-column: 1 / 2;
+    }
+}

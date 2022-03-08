@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; color: white}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <object class="box" data="images/illustration-box-desktop.svg" type=""></object>
+  <div class="container">
+    <div class="image">
+      <object class="pattern-desktop" data="images/bg-pattern-desktop.svg"></object>
+      <object class="pattern-mobile" data="images/bg-pattern-mobile.svg" type=""></object>
+      <object class="drawing-desktop" data="images/illustration-woman-online-desktop.svg" type=""></object>
+      <object class="drawing-mobile" data="images/illustration-woman-online-mobile.svg" type=""></object>
+    </div>
+    <div class="faq">
+      <h1>FAQ</h1>
+      <h2 class="question" onclick="expandAnswer(0)">
+        How many team members can I invite? 
+        <object class="arrow" data="images/icon-arrow-down.svg" type=""></object>
+      </h2>
+      <p class="answer">
+        You can invite up to 2 additional users on the Free plan. There is no limit on
+        team members for the Premium plan.
+      </p>
+      <hr>
+      <h2 class="question" onclick="expandAnswer(1)">
+        What is the maximum file upload size?
+        <object class="arrow" data="images/icon-arrow-down.svg" type=""></object>
+      </h2>
+      <p class="answer">
+        No more than 2GB. All files in your account must fit your allotted storage space.
+      </p>
+      <hr>
+      <h2 class="question" onclick="expandAnswer(2)">How do I reset my password?
+        <object class="arrow" data="images/icon-arrow-down.svg" type=""></object>
+      </h2>
+      <p class="answer">
+        Click “Forgot password” from the login page or “Change password” from your profile page.
+        A reset link will be emailed to you.
+      </p>
+      <hr>
+      <h2 class="question" onclick="expandAnswer(3)">
+        Can I cancel my subscription?
+        <object class="arrow" data="images/icon-arrow-down.svg" type=""></object>
+      </h2>
+      <p class="answer">Yes! Send us a message and we’ll process your request no questions asked.</p>
+      <hr>
+      <h2 class="question" onclick="expandAnswer(4)">
+        Do you provide additional support?
+        <object class="arrow" data="images/icon-arrow-down.svg" type=""></object>
+      </h2>
+      <p class="answer">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+      <hr>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.github.com/mark-elayache">Mark El Ayache</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
