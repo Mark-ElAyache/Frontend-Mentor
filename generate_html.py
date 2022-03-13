@@ -1,5 +1,5 @@
 import os
-challenges = ["Newbie"]
+challenges = ["Junior", "Newbie"]
 
 with open("index.html", "a") as file:
     file.write(
@@ -27,16 +27,18 @@ with open("index.html", "a") as file:
                 completion_status = "Completed"
                 css_style = "box-shadow: 0 7px hsl(120deg 80% 87%);"
                 disable_hover = ""
+                img_source = f"./{challenge}/{folder_location}/images/desktop.png"
             else:
                 folder_title = folder_location
                 completion_status = "Under Construction"
                 css_style = "box-shadow: 0 7px hsl(2deg 81% 87%);"
                 disable_hover = "pointer-events: none;"
+                img_source = "./images/desktop.png"
             file.write(
                         f'<a href="https://mark-elayache.github.io/Frontend-Mentor/{challenge}/{folder_location}/index.html" target="_blank" style="{disable_hover}">\n'
                             '<div class="card">\n'
-                                f'<h3><strong>Title:</strong> {folder_title}</h3>\n'
-                                f'<img src="./{challenge}/{folder_location}/images/desktop.png" alt="desktop.png" style="{css_style}">\n'
+                                f'<h3>{folder_title}</h3>\n'
+                                f'<img src="{img_source}" alt="desktop.png" style="{css_style}">\n'
                                 '<div class="status">\n'
                                     f'<p><strong>Status:</strong> {completion_status}</p>\n'
                                     '<div class="go-arrow">></div>\n'
@@ -44,8 +46,8 @@ with open("index.html", "a") as file:
                             '</div>\n'
                         '</a>\n'
             )
+        file.write('</div>\n')
     file.write(
-                '</div>\n'
                 '<footer>\n'
                     '<div class="socials">\n'
                         '<a class="social-link" target="_blank" href="https://www.linkedin.com/in/mark-elayache"><img src="images/linkedin.svg" alt=""></a>\n'
