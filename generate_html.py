@@ -19,7 +19,7 @@ with open("index.html", "a") as file:
     for challenge in challenges:
         folder_locations = os.listdir(f"./{challenge}")
         file.write(
-                    f'<h2>{challenge} Challenge</h2>\n'                    
+                    f'<h2>{challenge} Challenges</h2>\n'                    
                     '<div class="container">\n')
         for folder_location in folder_locations:
             if "(D) " in folder_location:
