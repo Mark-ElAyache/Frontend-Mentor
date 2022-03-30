@@ -27,7 +27,7 @@ with open("index.html", "a") as file:
                 completion_status = "Completed"
                 css_style = "box-shadow: 0 7px hsl(120deg 80% 87%);"
                 disable_hover = ""
-                img_source = f"./{challenge}/{folder_location}/images/desktop.png"
+                img_source = f"./{challenge.replace(' ', '%20')}/{folder_location.replace(' ', '%20')}/images/desktop.png"
             else:
                 folder_title = folder_location
                 completion_status = "Under Construction"
@@ -35,7 +35,7 @@ with open("index.html", "a") as file:
                 disable_hover = "pointer-events: none;"
                 img_source = "./images/desktop.png"
             file.write(
-                        f'<a href="https://mark-elayache.github.io/Frontend-Mentor/{challenge}/{folder_location}/index.html" target="_blank" style="{disable_hover}">\n'
+                        f'<a href="https://mark-elayache.github.io/Frontend-Mentor/{challenge.replace(" ", "%20")}/{folder_location.replace(" ", "%20")}/index.html" target="_blank" style="{disable_hover}">\n'
                             '<div class="card">\n'
                                 f'<h3>{folder_title}</h3>\n'
                                 f'<img src="{img_source}" alt="desktop.png" style="{css_style}">\n'
