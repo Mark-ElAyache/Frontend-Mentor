@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+:root {
+    --color-orange: hsl(25, 97%, 53%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-lightgray: hsl(217, 12%, 63%);
+    --color-mediumgray: hsl(216, 12%, 54%);
+    --color-darkblue: hsl(213, 19%, 18%);
+    --color-verydarkblue: hsl(216, 12%, 8%);
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0 !important;
+    
+    background-color: var(--color-verydarkblue);
+    color: var(--color-white);
+}
+h1 {
+    margin-bottom: 0;
+}
+p {
+    color: var(--color-lightgray);
+    line-height: 1.5;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+
+    width: min(375px, 85%);
+    padding: 1.5rem;
+    
+    background-color: hsl(213, 19%, 13%);
+    border-radius: 1rem;
+}
+
+/* Start Section */
+.start .star-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 100%;
+
+    background-color: var(--color-darkblue);
+}
+.start img {
+    width: 30%;
+}
+/* ...Rating Choices */
+.start .rating-no {
+    display: flex;
+    justify-content: space-between;
+}
+.start .rating-no p {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+    height: 3rem;
+    width: 3rem;
+    padding: 5px;
+    border-radius: 100%;
+
+    background-color: var(--color-darkblue);
+    
+    cursor: pointer;
+    user-select: none;
+}
+.active {
+    background-color: var(--color-mediumgray) !important;
+    color: var(--color-white);
+}
+.start .rating-no p:hover {
+    color: var(--color-white);
+    background-color: var(--color-orange);
+}
+/* ...Submit Button */
+.start button {
+    text-transform: uppercase;
+    letter-spacing: 1.75px;
+
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 0;
+    border-radius: 1.5rem;
+    
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    
+    cursor: pointer;
+}
+.start button:hover {
+    background-color: var(--color-white);
+    color: var(--color-orange);
+}
+
+/* Thank You Section */
+.container.rating {
+    display: none;
+    text-align: center;
+}
+.selected-rating {
+    width: fit-content;
+    padding: 0.25rem 0.75rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+
+    color: var(--color-orange);
+    background-color: var(--color-darkblue);
+}
+.attribution {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+}
